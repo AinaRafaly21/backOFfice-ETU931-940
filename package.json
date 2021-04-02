@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild" : "ng build --prod"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -25,11 +25,11 @@
     "@swimlane/ngx-charts": "^17.0.1",
     "animate.css": "^4.1.1",
     "chart.js": "^2.9.4",
-    "ng2-charts": "^2.4.2",
+    "ng2-charts": "^2.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.3",
-    "typescript": "~4.1.2"
+    "typescript": "~4.1.2",
+    "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.1",
@@ -50,8 +50,8 @@
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"
   },
-  "engines" : {
+  "engines": {
     "node": "14.15.4",
-    "npm" : "6.14.11"
+    "npm": "6.14.11"
   }
 }
