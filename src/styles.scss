@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.ngx-charts {
+  float: left;
+  overflow: visible;
+  margin-left: 300px;
+}
+.chart-legend .legend-labels {
+  background: rgba(0,0,0,.05);
+  border-radius: 3px;
+  float: left;
+  line-height: 85%;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: left;
+  white-space: nowrap;
+}

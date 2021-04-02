@@ -1,0 +1,32 @@
+
+<hr>
+<table id="users">
+    <thead>
+        <tr>
+            <th>Nom utilisateur</th>
+            <th>Numero</th>
+            <th>Montant</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let depot of (listDepotEnAttente); let i = index;">
+            <td>
+                {{ depot.nomUtilisateur }}
+            </td>
+            <td>
+                {{ depot.numero }}
+            </td>
+            <td>
+                {{ depot.montant }}
+            </td>
+            <td>
+              <a><button (click)=valider(i)>Valider</button></a>
+          </td>
+            <td>
+                <a><button (click)=refuser(i)>Refuser</button></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

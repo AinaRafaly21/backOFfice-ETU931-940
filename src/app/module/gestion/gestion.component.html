@@ -1,0 +1,119 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center;">Gestion Offre</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Type offre">
+        <mat-card-content>
+          <form #TypeForm="ngForm">
+              <mat-form-field>
+                <input
+                  type="text"
+                  matInput
+                  placeholder="Type offre"
+                  required
+                  name="type"
+                  ngModel
+                  #type="ngModel">
+                  <mat-error *ngIf="type.invalid">type?</mat-error>
+              </mat-form-field>
+            <button
+            (click)="nouveautype(TypeForm)"
+              mat-raised-button
+              color="primary"
+              class="login-button">
+              Enregistrer
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Offre">
+          <mat-card-content>
+            <form #AjoutForm="ngForm">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Nom de l'offre"
+                  required
+                  name="nom_offre"
+                  ngModel
+                  #nom_offre="ngModel">
+                  <mat-error *ngIf="nom_offre.invalid">nom?</mat-error>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Prix (MGA)"
+                  required
+                  name="prix_offre"
+                  ngModel
+                  #prix_offre="ngModel">
+                  <mat-error *ngIf="prix_offre.invalid">prix?</mat-error>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  type="number"
+                  matInput
+                  placeholder="Validite (min)"
+                  required
+                  name="validite_offre"
+                  ngModel
+                  #validite_offre="ngModel">
+                  <mat-error *ngIf="validite_offre.invalid">validite?</mat-error>
+              </mat-form-field>
+              <button
+              (click)="ajouter(AjoutForm)"
+                mat-raised-button
+                color="primary"
+                class="login-button">
+               Enregistrer
+            </button>
+            </form>
+          </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Details offre">
+        <mat-card-content>
+          <form action #OffreTypeOffreForm="ngForm">
+            <mat-form-field>
+                <mat-label>Offre</mat-label>
+                <mat-select ngModel name="idOffre">
+                  <mat-label>Offre</mat-label>
+                  <mat-option *ngFor="let offre of (listOffre)" [value]=offre.idOffre >{{ offre.nom_offre }}</mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            <mat-form-field>
+                <mat-label>Type offre</mat-label>
+                <mat-select ngModel name="idType_offre">
+                  <mat-label>Type Offre</mat-label>
+                  <mat-option *ngFor="let type of (listTypeOffre)" [value]=type.idTypeOffre >{{ type.type }}</mat-option>
+                </mat-select>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  type="number"
+                  matInput
+                  placeholder="Valeur (min/unite/Mo)"
+                  required
+                  name="valeur_offre"
+                  ngModel
+                  #valeur_offre="ngModel">
+                  <mat-error *ngIf="valeur_offre.invalid">valeur?</mat-error>
+              </mat-form-field>
+            <button
+            (click)="typeoffre(OffreTypeOffreForm)"
+              mat-raised-button
+              color="primary"
+              class="login-button">
+              Enregistrer
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-card>
+</div>
+
