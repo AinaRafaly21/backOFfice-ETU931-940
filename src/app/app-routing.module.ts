@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'stat', loadChildren: () => import('./module/stat/stat.module').then(m => m.StatModule) },
   { path: 'validation', loadChildren: () => import('./module/validation/validation.module').then(m => m.ValidationModule) },
 
-  { path: '', component: LoginComponent }
+  { path: '', component: HomeComponent }
 
 ];
 
